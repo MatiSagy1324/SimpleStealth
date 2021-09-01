@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "stealth",
+  "version": "${version}",
+
+  "name": "Simple Stealth",
+  "description": "Adds stealth mechanics (i.e. entity view angles and backstabs) to minecraft",
+  "authors": [
+    "Me",
+    "Myself",
+    "I",
+    "Frank"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+
+  "license": "MIT",
+  "icon": "assets/stealth/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "tyfyter.stealth.StealthMod"
+    ]
+  },
+  "mixins": [
+    "stealth.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.11.3",
+    "fabric": "*",
+    "minecraft": "1.17.x",
+    "java": ">=16"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "tyfyter.stealth.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "StealthEntityMixin",
+    "StealthPlayerMixin",
+    "EntityATInvoker"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
