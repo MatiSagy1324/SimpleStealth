@@ -7,6 +7,6 @@ import org.spongepowered.asm.mixin.gen.Invoker;
 
 @Mixin(Entity.class)
 public interface EntityATInvoker {
-	@Invoker
-	Vec3d invokeGetRotationVector(float pitch, float yaw);
+	@Invoker("getRotationVector")
+	Vec3d stealthInvokeGetRotationVector(float pitch, float yaw);
 }

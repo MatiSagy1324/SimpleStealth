@@ -22,7 +22,7 @@ public class StealthMod implements ModInitializer {
 		return new Vec3d(entity.getX(), entity.getEyeY(), entity.getZ());
 	}
 	public static boolean inViewRange(Entity viewer, Vec3d target, double range){
-		Vec3d eyes = ((EntityATInvoker)viewer).invokeGetRotationVector(viewer.getPitch(), viewer.getHeadYaw());
+		Vec3d eyes = ((EntityATInvoker)viewer).stealthInvokeGetRotationVector(viewer.getPitch(), viewer.getHeadYaw());
 		Vec3d eyepos = StealthMod.getEyePos(viewer);
 		double dot = target.subtract(
 				  eyepos).normalize().dotProduct(
