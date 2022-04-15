@@ -9,11 +9,13 @@
     "Me",
     "Myself",
     "I",
-    "Frank"
+    "Frank",
+    "Herobrine"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://tyfyter.github.io",
+    "sources": "https://github.com/Tyfyter/SimpleStealth",
+    "issues": "https://github.com/Tyfyter/SimpleStealth/issues"
   },
 
   "license": "MIT",
