@@ -24,10 +24,16 @@ public class StealthMod implements ModInitializer {
 	public static boolean inViewRange(Entity viewer, Vec3d target, double range){
 		Vec3d eyes = ((EntityATInvoker)viewer).stealthInvokeGetRotationVector(viewer.getPitch(), viewer.getHeadYaw());
 		Vec3d eyepos = StealthMod.getEyePos(viewer);
-		double dot = target.subtract(
-				  eyepos).normalize().dotProduct(
-				  eyes
-		);
+		Vec3d diff = target.subtract(eyepos);
+		double d = diff.x * diff.x + diff.y * diff.y + diff.z * diff.z;
+		//2 (minimum invisibility detection range) squared
+		if(d < 4){
+			return true;
+		}
+		d = Math.sqrt(d);
+		//use length to normalize
+		diff =  d < 1.0E-4D ? Vec3d.ZERO : new Vec3d(diff.x / d, diff.y / d, diff.z / d);
+		double dot = diff.dotProduct(eyes);
 		return dot>=range;
 	}
 }
